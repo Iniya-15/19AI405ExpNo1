@@ -41,6 +41,7 @@
 <h3>STEP 5:</h3>
 <p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
 <hr>
+
 <H3>PROGRAM</H3>
 ```
 import random
@@ -86,7 +87,9 @@ print(f"Total dirt cleaned: {cleaned}")
 
 <H3>OUTPUT<H3>
 
-![Screenshot 2025-03-24 090145](https://github.com/user-attachments/assets/b78b7223-fd3d-4377-9326-ac76758ec390)
+![image](https://github.com/user-attachments/assets/fa3f79c6-b67f-4f32-b914-b338f362161f)
+
+
 <H3>RESULT<H3>
 Thus the python program to develop an AI Agent is successfully executed.
 
