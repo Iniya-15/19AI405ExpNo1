@@ -42,54 +42,6 @@
 <p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
 <hr>
 
-<H3>PROGRAM</H3>
-```
-import random
 
 
-EMPTY = 0
-DIRT = 1
-GRID_SIZE = 5
-
-
-grid = [[random.choice([EMPTY, DIRT]) for _ in range(GRID_SIZE)] for _ in range(GRID_SIZE)]
-x, y = 0, 0 
-cleaned = 0  
-
-
-def move():
-    global x, y
-    direction = random.choice(['up', 'down', 'left', 'right'])
-    if direction == 'up' and x > 0:
-        x -= 1
-    elif direction == 'down' and x < GRID_SIZE - 1:
-        x += 1
-    elif direction == 'left' and y > 0:
-        y -= 1
-    elif direction == 'right' and y < GRID_SIZE - 1:
-        y += 1
-
-def clean():
-    global cleaned
-    if grid[x][y] == DIRT:
-        grid[x][y] = EMPTY
-        cleaned += 1
-        print(f"Cleaned dirt at position ({x}, {y})")
-
-
-for step in range(10):
-    print(f"Step {step + 1}: Current Position ({x}, {y}), Cleaned: {cleaned}")
-    clean()
-    move()
-
-print(f"Total dirt cleaned: {cleaned}")
-```
-
-<H3>OUTPUT<H3>
-
-![image](https://github.com/user-attachments/assets/fa3f79c6-b67f-4f32-b914-b338f362161f)
-
-
-<H3>RESULT<H3>
-Thus the python program to develop an AI Agent is successfully executed.
 
