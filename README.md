@@ -1,6 +1,6 @@
 <h1>ExpNo 1 :Developing AI Agent with PEAS Description</h1>
-<h3>Name: Saravanan N</h3>
-<h3>Register Number/Staff Id: TSML006</h3>
+<h3>Name: Iniya E</h3>
+<h3>Register Number: 212224230096</h3>
 
 
 <h3>AIM:</h3>
@@ -40,3 +40,45 @@
 <p>Treat unhealthy patients in each room. And check for the unhealthy patients in random room</p>
 <h3>STEP 5:</h3>
 <p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
+<hp3>PROGRAM</hp3>
+import random
+
+
+EMPTY = 0
+DIRT = 1
+GRID_SIZE = 5
+
+
+grid = [[random.choice([EMPTY, DIRT]) for _ in range(GRID_SIZE)] for _ in range(GRID_SIZE)]
+x, y = 0, 0 
+cleaned = 0  
+
+
+def move():
+    global x, y
+    direction = random.choice(['up', 'down', 'left', 'right'])
+    if direction == 'up' and x > 0:
+        x -= 1
+    elif direction == 'down' and x < GRID_SIZE - 1:
+        x += 1
+    elif direction == 'left' and y > 0:
+        y -= 1
+    elif direction == 'right' and y < GRID_SIZE - 1:
+        y += 1
+
+def clean():
+    global cleaned
+    if grid[x][y] == DIRT:
+        grid[x][y] = EMPTY
+        cleaned += 1
+        print(f"Cleaned dirt at position ({x}, {y})")
+
+
+for step in range(10):
+    print(f"Step {step + 1}: Current Position ({x}, {y}), Cleaned: {cleaned}")
+    clean()
+    move()
+
+print(f"Total dirt cleaned: {cleaned}")
+
+
