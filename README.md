@@ -40,7 +40,8 @@
 <p>Treat unhealthy patients in each room. And check for the unhealthy patients in random room</p>
 <h3>STEP 5:</h3>
 <p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
-##
+<hr>
+<H3>PROGRAM</H3>
 ```
 import random
 
@@ -82,8 +83,10 @@ for step in range(10):
 
 print(f"Total dirt cleaned: {cleaned}")
 ```
-## OUTPUT:
+
+<H3>OUTPUT<H3>
+
 ![Screenshot 2025-03-24 090145](https://github.com/user-attachments/assets/b78b7223-fd3d-4377-9326-ac76758ec390)
-## RESULT:
+<H3>RESULT<H3>
 Thus the python program to develop an AI Agent is successfully executed.
 
