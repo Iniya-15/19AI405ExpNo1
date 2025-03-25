@@ -42,6 +42,62 @@
 <p>Measure the performance parameters: For each treatment performance incremented, for each movement performance decremented</p>
 <hr>
 
+### Program:
+```
+import re
 
+# Dictionary mapping symptoms to medicines
+medicine_db = {
+    "fever": "Paracetamol",
+    "headache": "Ibuprofen",
+    "cough": "Dextromethorphan",
+    "cold": "Antihistamines",
+    "sore throat": "Lozenges",
+    "body pain": "Acetaminophen",
+    "stomach ache": "Antacids",
+    "vomiting": "Ondansetron",
+    "diarrhea": "ORS Solution",
+    "allergy": "Cetirizine",
+    "hypertension": "Amlodipine",
+    "diabetes": "Metformin"
+}
+
+def prescribe_medicine(symptoms):
+    """
+    Function to prescribe medicine based on symptoms.
+    :param symptoms: List of symptoms entered by the user.
+    :return: Recommended medicine.
+    """
+    prescribed_medicines = set()
+    
+    for symptom in symptoms:
+        symptom = symptom.lower().strip()
+        if symptom in medicine_db:
+            prescribed_medicines.add(medicine_db[symptom])
+
+    if prescribed_medicines:
+        return f"Recommended Medicines: {', '.join(prescribed_medicines)}"
+    else:
+        return "No exact match found. Please consult a doctor."
+
+# Taking user input
+user_input = input("Enter symptoms separated by commas: ")
+symptoms_list = re.split(r',|\s+', user_input)
+
+# Get prescribed medicine
+result = prescribe_medicine(symptoms_list)
+print(result)
+```
+### Sample Input:
+```
+fever, cough, body pain
+```
+
+### Sample Output:
+```
+Recommended Medicines: Paracetamol, Dextromethorphan, Acetaminophen
+```
+### Result:
+Thus the python program for developing an AI agent to prescribe medicine is succesfully done.
 
 
